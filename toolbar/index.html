@@ -1,0 +1,2594 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://leafmap.org/toolbar/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.6">
+    
+    
+      
+        <title>toolbar module - leafmap</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.802231af.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+    
+      
+  
+
+
+
+  
+  
+
+
+
+  <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-198454981-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+  <script async src="https://www.google-analytics.com/analytics.js"></script>
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#toolbar-module" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="leafmap" class="md-header__button md-logo" aria-label="leafmap" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            leafmap
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              toolbar module
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/giswqs/leafmap/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="leafmap" class="md-nav__button md-logo" aria-label="leafmap" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    leafmap
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/giswqs/leafmap/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get-started/" class="md-nav__link">
+        Get Started
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/00_key_features/" class="md-nav__link">
+        Usage
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../maps/" class="md-nav__link">
+        Interactive Maps
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/" class="md-nav__link">
+        Tutorials
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing/" class="md-nav__link">
+        Contributing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog/" class="md-nav__link">
+        Changelog
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.youtube.com/c/QiushengWu" class="md-nav__link">
+        YouTube Channel
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/giswqs/leafmap/issues" class="md-nav__link">
+        Report Issues
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" type="checkbox" id="__nav_12" checked>
+      
+      <label class="md-nav__link" for="__nav_12">
+        API Reference
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="API Reference" data-md-level="1">
+        <label class="md-nav__title" for="__nav_12">
+          <span class="md-nav__icon md-icon"></span>
+          API Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basemaps/" class="md-nav__link">
+        basemaps module
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../colormaps/" class="md-nav__link">
+        colormaps module
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../common/" class="md-nav__link">
+        common module
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../foliumap/" class="md-nav__link">
+        foliumap module
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../heremap/" class="md-nav__link">
+        heremap module
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kepler/" class="md-nav__link">
+        kepler module
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../leafmap/" class="md-nav__link">
+        leafmap module
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../legends/" class="md-nav__link">
+        legends module
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../osm/" class="md-nav__link">
+        osm module
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          toolbar module
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        toolbar module
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#leafmap.toolbar" class="md-nav__link">
+    leafmap.toolbar
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leafmap.toolbar.change_basemap" class="md-nav__link">
+    change_basemap()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leafmap.toolbar.main_toolbar" class="md-nav__link">
+    main_toolbar()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leafmap.toolbar.open_data_widget" class="md-nav__link">
+    open_data_widget()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leafmap.toolbar.save_map" class="md-nav__link">
+    save_map()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leafmap.toolbar.time_slider" class="md-nav__link">
+    time_slider()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leafmap.toolbar.tool_template" class="md-nav__link">
+    tool_template()
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13" type="checkbox" id="__nav_13" >
+      
+      <label class="md-nav__link" for="__nav_13">
+        Notebooks
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Notebooks" data-md-level="1">
+        <label class="md-nav__title" for="__nav_13">
+          <span class="md-nav__icon md-icon"></span>
+          Notebooks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/00_key_features/" class="md-nav__link">
+        00 key features
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/01_leafmap_intro/" class="md-nav__link">
+        01 leafmap intro
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/02_using_basemaps/" class="md-nav__link">
+        02 using basemaps
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/03_cog_stac/" class="md-nav__link">
+        03 cog stac
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/04_cog_mosaic/" class="md-nav__link">
+        04 cog mosaic
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/05_load_raster/" class="md-nav__link">
+        05 load raster
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/06_legend/" class="md-nav__link">
+        06 legend
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/07_colorbar/" class="md-nav__link">
+        07 colorbar
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/08_whitebox/" class="md-nav__link">
+        08 whitebox
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/09_csv_to_points/" class="md-nav__link">
+        09 csv to points
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/10_add_vector/" class="md-nav__link">
+        10 add vector
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/11_linked_maps/" class="md-nav__link">
+        11 linked maps
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/12_split_map/" class="md-nav__link">
+        12 split map
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/13_geopandas/" class="md-nav__link">
+        13 geopandas
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/14_postgis/" class="md-nav__link">
+        14 postgis
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/15_openstreetmap/" class="md-nav__link">
+        15 openstreetmap
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/16_heremap/" class="md-nav__link">
+        16 heremap
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/17_vector_tile_layer/" class="md-nav__link">
+        17 vector tile layer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/18_point_layer/" class="md-nav__link">
+        18 point layer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/19_map_to_html/" class="md-nav__link">
+        19 map to html
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/20_planet_imagery/" class="md-nav__link">
+        20 planet imagery
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/21_ts_inspector/" class="md-nav__link">
+        21 ts inspector
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/22_time_slider/" class="md-nav__link">
+        22 time slider
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/23_colormaps/" class="md-nav__link">
+        23 colormaps
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/24_heatmap/" class="md-nav__link">
+        24 heatmap
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/25_map_title/" class="md-nav__link">
+        25 map title
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/26_kepler_gl/" class="md-nav__link">
+        26 kepler gl
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/27_basemap_gallery/" class="md-nav__link">
+        27 basemap gallery
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/28_publish_map/" class="md-nav__link">
+        28 publish map
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#leafmap.toolbar" class="md-nav__link">
+    leafmap.toolbar
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leafmap.toolbar.change_basemap" class="md-nav__link">
+    change_basemap()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leafmap.toolbar.main_toolbar" class="md-nav__link">
+    main_toolbar()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leafmap.toolbar.open_data_widget" class="md-nav__link">
+    open_data_widget()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leafmap.toolbar.save_map" class="md-nav__link">
+    save_map()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leafmap.toolbar.time_slider" class="md-nav__link">
+    time_slider()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leafmap.toolbar.tool_template" class="md-nav__link">
+    tool_template()
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+
+
+
+                
+                  <a href="https://github.com/giswqs/leafmap/edit/master/docs/toolbar.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="toolbar-module">toolbar module<a class="headerlink" href="#toolbar-module" title="Permanent link">&para;</a></h1>
+
+
+  <div class="doc doc-object doc-module">
+
+<a id="leafmap.toolbar"></a>
+    <div class="doc doc-contents first">
+
+      <p>Module for dealing with the toolbar.</p>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="leafmap.toolbar.change_basemap" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">change_basemap</span><span class="p">(</span><span class="n">m</span><span class="p">)</span></code>
+
+
+<a href="#leafmap.toolbar.change_basemap" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Widget for changing basemaps.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>m</code></td>
+        <td><code>object</code></td>
+        <td><p>leafmap.Map.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>leafmap/toolbar.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">change_basemap</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Widget for changing basemaps.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        m (object): leafmap.Map.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">from</span> <span class="nn">.basemaps</span> <span class="kn">import</span> <span class="n">leafmap_basemaps</span><span class="p">,</span> <span class="n">get_xyz_dict</span>
+
+    <span class="n">xyz_dict</span> <span class="o">=</span> <span class="n">get_xyz_dict</span><span class="p">()</span>
+
+    <span class="n">layers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">layers</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">layers</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">layers</span> <span class="o">=</span> <span class="p">[</span><span class="n">layers</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">+</span> <span class="p">[</span><span class="n">leafmap_basemaps</span><span class="p">[</span><span class="s2">&quot;OpenStreetMap&quot;</span><span class="p">]]</span>
+    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">layers</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="ow">and</span> <span class="p">(</span><span class="n">layers</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">name</span> <span class="o">!=</span> <span class="s2">&quot;OpenStreetMap&quot;</span><span class="p">):</span>
+        <span class="n">layers</span> <span class="o">=</span> <span class="p">[</span><span class="n">layers</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">+</span> <span class="p">[</span><span class="n">leafmap_basemaps</span><span class="p">[</span><span class="s2">&quot;OpenStreetMap&quot;</span><span class="p">]]</span> <span class="o">+</span> <span class="n">layers</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+    <span class="n">m</span><span class="o">.</span><span class="n">layers</span> <span class="o">=</span> <span class="n">layers</span>
+
+    <span class="n">value</span> <span class="o">=</span> <span class="s2">&quot;OpenStreetMap&quot;</span>
+
+    <span class="n">dropdown</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Dropdown</span><span class="p">(</span>
+        <span class="n">options</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">leafmap_basemaps</span><span class="o">.</span><span class="n">keys</span><span class="p">()),</span>
+        <span class="n">value</span><span class="o">=</span><span class="n">value</span><span class="p">,</span>
+        <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="s2">&quot;200px&quot;</span><span class="p">),</span>
+    <span class="p">)</span>
+
+    <span class="n">close_btn</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span>
+        <span class="n">icon</span><span class="o">=</span><span class="s2">&quot;times&quot;</span><span class="p">,</span>
+        <span class="n">tooltip</span><span class="o">=</span><span class="s2">&quot;Close the basemap widget&quot;</span><span class="p">,</span>
+        <span class="n">button_style</span><span class="o">=</span><span class="s2">&quot;primary&quot;</span><span class="p">,</span>
+        <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="s2">&quot;32px&quot;</span><span class="p">),</span>
+    <span class="p">)</span>
+
+    <span class="n">basemap_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">([</span><span class="n">dropdown</span><span class="p">,</span> <span class="n">close_btn</span><span class="p">])</span>
+
+    <span class="k">def</span> <span class="nf">on_click</span><span class="p">(</span><span class="n">change</span><span class="p">):</span>
+        <span class="n">basemap_name</span> <span class="o">=</span> <span class="n">change</span><span class="p">[</span><span class="s2">&quot;new&quot;</span><span class="p">]</span>
+        <span class="n">old_basemap</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">m</span><span class="o">.</span><span class="n">substitute_layer</span><span class="p">(</span><span class="n">old_basemap</span><span class="p">,</span> <span class="n">leafmap_basemaps</span><span class="p">[</span><span class="n">basemap_name</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">basemap_name</span> <span class="ow">in</span> <span class="n">xyz_dict</span><span class="p">:</span>
+            <span class="k">if</span> <span class="s2">&quot;bounds&quot;</span> <span class="ow">in</span> <span class="n">xyz_dict</span><span class="p">[</span><span class="n">basemap_name</span><span class="p">]:</span>
+                <span class="n">bounds</span> <span class="o">=</span> <span class="n">xyz_dict</span><span class="p">[</span><span class="n">basemap_name</span><span class="p">][</span><span class="s2">&quot;bounds&quot;</span><span class="p">]</span>
+                <span class="n">bounds</span> <span class="o">=</span> <span class="p">[</span><span class="n">bounds</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">bounds</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">bounds</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">bounds</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]]</span>
+                <span class="n">m</span><span class="o">.</span><span class="n">zoom_to_bounds</span><span class="p">(</span><span class="n">bounds</span><span class="p">)</span>
+
+    <span class="n">dropdown</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">on_click</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">close_click</span><span class="p">(</span><span class="n">change</span><span class="p">):</span>
+        <span class="n">m</span><span class="o">.</span><span class="n">toolbar_reset</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">m</span><span class="o">.</span><span class="n">basemap_ctrl</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">m</span><span class="o">.</span><span class="n">basemap_ctrl</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">controls</span><span class="p">:</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">remove_control</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">basemap_ctrl</span><span class="p">)</span>
+        <span class="n">basemap_widget</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="n">close_btn</span><span class="o">.</span><span class="n">on_click</span><span class="p">(</span><span class="n">close_click</span><span class="p">)</span>
+
+    <span class="n">basemap_control</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">WidgetControl</span><span class="p">(</span>
+        <span class="n">widget</span><span class="o">=</span><span class="n">basemap_widget</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;topright&quot;</span>
+    <span class="p">)</span>
+    <span class="n">m</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">basemap_control</span><span class="p">)</span>
+    <span class="n">m</span><span class="o">.</span><span class="n">basemap_ctrl</span> <span class="o">=</span> <span class="n">basemap_control</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="leafmap.toolbar.main_toolbar" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">main_toolbar</span><span class="p">(</span><span class="n">m</span><span class="p">)</span></code>
+
+
+<a href="#leafmap.toolbar.main_toolbar" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Creates the main toolbar and adds it to the map.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>m</code></td>
+        <td><code>leafmap.Map</code></td>
+        <td><p>The leafmap Map object.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>leafmap/toolbar.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">main_toolbar</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Creates the main toolbar and adds it to the map.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        m (leafmap.Map): The leafmap Map object.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">tools</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;map&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;basemap&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;tooltip&quot;</span><span class="p">:</span> <span class="s2">&quot;Change basemap&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;globe&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;split_map&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;tooltip&quot;</span><span class="p">:</span> <span class="s2">&quot;Split-panel map&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;adjust&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;planet&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;tooltip&quot;</span><span class="p">:</span> <span class="s2">&quot;Planet imagery&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;folder-open&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;open_data&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;tooltip&quot;</span><span class="p">:</span> <span class="s2">&quot;Open local vector/raster data&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;gears&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;whitebox&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;tooltip&quot;</span><span class="p">:</span> <span class="s2">&quot;WhiteboxTools for local geoprocessing&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;fast-forward&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;timeslider&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;tooltip&quot;</span><span class="p">:</span> <span class="s2">&quot;Activate the time slider&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;eraser&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;eraser&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;tooltip&quot;</span><span class="p">:</span> <span class="s2">&quot;Remove all drawn features&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;camera&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;save_map&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;tooltip&quot;</span><span class="p">:</span> <span class="s2">&quot;Save map as HTML or image&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="c1"># &quot;smile-o&quot;: {</span>
+        <span class="c1">#     &quot;name&quot;: &quot;placeholder&quot;,</span>
+        <span class="c1">#     &quot;tooltip&quot;: &quot;This is a placeholder&quot;,</span>
+        <span class="c1"># },</span>
+        <span class="c1"># &quot;spinner&quot;: {</span>
+        <span class="c1">#     &quot;name&quot;: &quot;placeholder2&quot;,</span>
+        <span class="c1">#     &quot;tooltip&quot;: &quot;This is a placeholder&quot;,</span>
+        <span class="c1"># },</span>
+        <span class="s2">&quot;question&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;help&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;tooltip&quot;</span><span class="p">:</span> <span class="s2">&quot;Get help&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="c1"># if m.sandbox_path is None and (os.environ.get(&quot;USE_VOILA&quot;) is not None):</span>
+    <span class="c1">#     voila_tools = [&quot;camera&quot;, &quot;folder-open&quot;, &quot;gears&quot;]</span>
+
+    <span class="c1">#     for item in voila_tools:</span>
+    <span class="c1">#         if item in tools.keys():</span>
+    <span class="c1">#             del tools[item]</span>
+
+    <span class="n">icons</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">tools</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+    <span class="n">tooltips</span> <span class="o">=</span> <span class="p">[</span><span class="n">item</span><span class="p">[</span><span class="s2">&quot;tooltip&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">tools</span><span class="o">.</span><span class="n">values</span><span class="p">())]</span>
+
+    <span class="n">icon_width</span> <span class="o">=</span> <span class="s2">&quot;32px&quot;</span>
+    <span class="n">icon_height</span> <span class="o">=</span> <span class="s2">&quot;32px&quot;</span>
+    <span class="n">n_cols</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">n_rows</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">icons</span><span class="p">)</span> <span class="o">/</span> <span class="n">n_cols</span><span class="p">)</span>
+
+    <span class="n">toolbar_grid</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">GridBox</span><span class="p">(</span>
+        <span class="n">children</span><span class="o">=</span><span class="p">[</span>
+            <span class="n">widgets</span><span class="o">.</span><span class="n">ToggleButton</span><span class="p">(</span>
+                <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span>
+                    <span class="n">width</span><span class="o">=</span><span class="s2">&quot;auto&quot;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="s2">&quot;auto&quot;</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s2">&quot;0px 0px 0px 4px&quot;</span>
+                <span class="p">),</span>
+                <span class="n">button_style</span><span class="o">=</span><span class="s2">&quot;primary&quot;</span><span class="p">,</span>
+                <span class="n">icon</span><span class="o">=</span><span class="n">icons</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+                <span class="n">tooltip</span><span class="o">=</span><span class="n">tooltips</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+            <span class="p">)</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">icons</span><span class="p">))</span>
+        <span class="p">],</span>
+        <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span>
+            <span class="n">width</span><span class="o">=</span><span class="s2">&quot;109px&quot;</span><span class="p">,</span>
+            <span class="n">grid_template_columns</span><span class="o">=</span><span class="p">(</span><span class="n">icon_width</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span><span class="p">)</span> <span class="o">*</span> <span class="n">n_cols</span><span class="p">,</span>
+            <span class="n">grid_template_rows</span><span class="o">=</span><span class="p">(</span><span class="n">icon_height</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span><span class="p">)</span> <span class="o">*</span> <span class="n">n_rows</span><span class="p">,</span>
+            <span class="n">grid_gap</span><span class="o">=</span><span class="s2">&quot;1px 1px&quot;</span><span class="p">,</span>
+            <span class="n">padding</span><span class="o">=</span><span class="s2">&quot;5px&quot;</span><span class="p">,</span>
+        <span class="p">),</span>
+    <span class="p">)</span>
+    <span class="n">m</span><span class="o">.</span><span class="n">toolbar</span> <span class="o">=</span> <span class="n">toolbar_grid</span>
+
+    <span class="k">def</span> <span class="nf">tool_callback</span><span class="p">(</span><span class="n">change</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="n">change</span><span class="p">[</span><span class="s2">&quot;new&quot;</span><span class="p">]:</span>
+            <span class="n">current_tool</span> <span class="o">=</span> <span class="n">change</span><span class="p">[</span><span class="s2">&quot;owner&quot;</span><span class="p">]</span>
+            <span class="k">for</span> <span class="n">tool</span> <span class="ow">in</span> <span class="n">toolbar_grid</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">tool</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">current_tool</span><span class="p">:</span>
+                    <span class="n">tool</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="n">tool</span> <span class="o">=</span> <span class="n">change</span><span class="p">[</span><span class="s2">&quot;owner&quot;</span><span class="p">]</span>
+            <span class="n">tool_name</span> <span class="o">=</span> <span class="n">tools</span><span class="p">[</span><span class="n">tool</span><span class="o">.</span><span class="n">icon</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">]</span>
+
+            <span class="k">if</span> <span class="n">tool_name</span> <span class="o">==</span> <span class="s2">&quot;basemap&quot;</span><span class="p">:</span>
+                <span class="n">change_basemap</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">tool_name</span> <span class="o">==</span> <span class="s2">&quot;split_map&quot;</span><span class="p">:</span>
+                <span class="n">split_basemaps</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">tool_name</span> <span class="o">==</span> <span class="s2">&quot;planet&quot;</span><span class="p">:</span>
+                <span class="n">split_basemaps</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">layers_dict</span><span class="o">=</span><span class="n">planet_tiles</span><span class="p">())</span>
+            <span class="k">elif</span> <span class="n">tool_name</span> <span class="o">==</span> <span class="s2">&quot;open_data&quot;</span><span class="p">:</span>
+                <span class="n">open_data_widget</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">tool_name</span> <span class="o">==</span> <span class="s2">&quot;eraser&quot;</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">m</span><span class="o">.</span><span class="n">draw_control</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">m</span><span class="o">.</span><span class="n">draw_control</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+                    <span class="n">m</span><span class="o">.</span><span class="n">user_roi</span> <span class="o">=</span> <span class="kc">None</span>
+                    <span class="n">m</span><span class="o">.</span><span class="n">user_rois</span> <span class="o">=</span> <span class="kc">None</span>
+                    <span class="n">m</span><span class="o">.</span><span class="n">draw_features</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">elif</span> <span class="n">tool_name</span> <span class="o">==</span> <span class="s2">&quot;whitebox&quot;</span><span class="p">:</span>
+                <span class="kn">import</span> <span class="nn">whiteboxgui.whiteboxgui</span> <span class="k">as</span> <span class="nn">wbt</span>
+
+                <span class="n">tools_dict</span> <span class="o">=</span> <span class="n">wbt</span><span class="o">.</span><span class="n">get_wbt_dict</span><span class="p">()</span>
+                <span class="n">wbt_toolbox</span> <span class="o">=</span> <span class="n">wbt</span><span class="o">.</span><span class="n">build_toolbox</span><span class="p">(</span>
+                    <span class="n">tools_dict</span><span class="p">,</span>
+                    <span class="n">max_width</span><span class="o">=</span><span class="s2">&quot;800px&quot;</span><span class="p">,</span>
+                    <span class="n">max_height</span><span class="o">=</span><span class="s2">&quot;500px&quot;</span><span class="p">,</span>
+                    <span class="n">sandbox_path</span><span class="o">=</span><span class="n">m</span><span class="o">.</span><span class="n">sandbox_path</span><span class="p">,</span>
+                <span class="p">)</span>
+                <span class="n">wbt_control</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">WidgetControl</span><span class="p">(</span>
+                    <span class="n">widget</span><span class="o">=</span><span class="n">wbt_toolbox</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;bottomright&quot;</span>
+                <span class="p">)</span>
+                <span class="n">m</span><span class="o">.</span><span class="n">whitebox</span> <span class="o">=</span> <span class="n">wbt_control</span>
+                <span class="n">m</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">wbt_control</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">tool_name</span> <span class="o">==</span> <span class="s2">&quot;timeslider&quot;</span><span class="p">:</span>
+                <span class="n">m</span><span class="o">.</span><span class="n">add_time_slider</span><span class="p">()</span>
+            <span class="k">elif</span> <span class="n">tool_name</span> <span class="o">==</span> <span class="s2">&quot;save_map&quot;</span><span class="p">:</span>
+                <span class="n">save_map</span><span class="p">((</span><span class="n">m</span><span class="p">))</span>
+            <span class="k">elif</span> <span class="n">tool_name</span> <span class="o">==</span> <span class="s2">&quot;help&quot;</span><span class="p">:</span>
+                <span class="kn">import</span> <span class="nn">webbrowser</span>
+
+                <span class="n">webbrowser</span><span class="o">.</span><span class="n">open_new_tab</span><span class="p">(</span><span class="s2">&quot;https://leafmap.org&quot;</span><span class="p">)</span>
+                <span class="n">current_tool</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># tool = change[&quot;owner&quot;]</span>
+            <span class="c1"># tool_name = tools[tool.icon][&quot;name&quot;]</span>
+            <span class="k">pass</span>
+
+        <span class="n">m</span><span class="o">.</span><span class="n">toolbar_reset</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">tool</span> <span class="ow">in</span> <span class="n">toolbar_grid</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+        <span class="n">tool</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">tool_callback</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">)</span>
+
+    <span class="n">toolbar_button</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">ToggleButton</span><span class="p">(</span>
+        <span class="n">value</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">tooltip</span><span class="o">=</span><span class="s2">&quot;Toolbar&quot;</span><span class="p">,</span>
+        <span class="n">icon</span><span class="o">=</span><span class="s2">&quot;wrench&quot;</span><span class="p">,</span>
+        <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="s2">&quot;28px&quot;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="s2">&quot;28px&quot;</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s2">&quot;0px 0px 0px 4px&quot;</span><span class="p">),</span>
+    <span class="p">)</span>
+    <span class="n">m</span><span class="o">.</span><span class="n">toolbar_button</span> <span class="o">=</span> <span class="n">toolbar_button</span>
+
+    <span class="n">layers_button</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">ToggleButton</span><span class="p">(</span>
+        <span class="n">value</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">tooltip</span><span class="o">=</span><span class="s2">&quot;Layers&quot;</span><span class="p">,</span>
+        <span class="n">icon</span><span class="o">=</span><span class="s2">&quot;server&quot;</span><span class="p">,</span>
+        <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="s2">&quot;28px&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;72px&quot;</span><span class="p">),</span>
+    <span class="p">)</span>
+
+    <span class="n">toolbar_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">()</span>
+    <span class="n">toolbar_widget</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[</span><span class="n">toolbar_button</span><span class="p">]</span>
+    <span class="n">toolbar_header</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">()</span>
+    <span class="n">toolbar_header</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[</span><span class="n">layers_button</span><span class="p">,</span> <span class="n">toolbar_button</span><span class="p">]</span>
+    <span class="n">toolbar_footer</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">()</span>
+    <span class="n">toolbar_footer</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[</span><span class="n">toolbar_grid</span><span class="p">]</span>
+
+    <span class="n">toolbar_event</span> <span class="o">=</span> <span class="n">ipyevents</span><span class="o">.</span><span class="n">Event</span><span class="p">(</span>
+        <span class="n">source</span><span class="o">=</span><span class="n">toolbar_widget</span><span class="p">,</span> <span class="n">watched_events</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;mouseenter&quot;</span><span class="p">,</span> <span class="s2">&quot;mouseleave&quot;</span><span class="p">]</span>
+    <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">handle_toolbar_event</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="n">event</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;mouseenter&quot;</span><span class="p">:</span>
+            <span class="n">toolbar_widget</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[</span><span class="n">toolbar_header</span><span class="p">,</span> <span class="n">toolbar_footer</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">event</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;mouseleave&quot;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">toolbar_button</span><span class="o">.</span><span class="n">value</span><span class="p">:</span>
+                <span class="n">toolbar_widget</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[</span><span class="n">toolbar_button</span><span class="p">]</span>
+                <span class="n">toolbar_button</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="n">layers_button</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="n">toolbar_event</span><span class="o">.</span><span class="n">on_dom_event</span><span class="p">(</span><span class="n">handle_toolbar_event</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">toolbar_btn_click</span><span class="p">(</span><span class="n">change</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">change</span><span class="p">[</span><span class="s2">&quot;new&quot;</span><span class="p">]:</span>
+            <span class="n">layers_button</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="n">toolbar_widget</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[</span><span class="n">toolbar_header</span><span class="p">,</span> <span class="n">toolbar_footer</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">layers_button</span><span class="o">.</span><span class="n">value</span><span class="p">:</span>
+                <span class="n">toolbar_widget</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[</span><span class="n">toolbar_button</span><span class="p">]</span>
+
+    <span class="n">toolbar_button</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">toolbar_btn_click</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">layers_btn_click</span><span class="p">(</span><span class="n">change</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">change</span><span class="p">[</span><span class="s2">&quot;new&quot;</span><span class="p">]:</span>
+
+            <span class="n">layers_hbox</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">all_layers_chk</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Checkbox</span><span class="p">(</span>
+                <span class="n">value</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                <span class="n">description</span><span class="o">=</span><span class="s2">&quot;All layers on/off&quot;</span><span class="p">,</span>
+                <span class="n">indent</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="s2">&quot;18px&quot;</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s2">&quot;0px 8px 25px 8px&quot;</span><span class="p">),</span>
+            <span class="p">)</span>
+            <span class="n">all_layers_chk</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="s2">&quot;30ex&quot;</span>
+            <span class="n">layers_hbox</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">all_layers_chk</span><span class="p">)</span>
+
+            <span class="k">def</span> <span class="nf">all_layers_chk_changed</span><span class="p">(</span><span class="n">change</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">change</span><span class="p">[</span><span class="s2">&quot;new&quot;</span><span class="p">]:</span>
+                    <span class="k">for</span> <span class="n">layer</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">layers</span><span class="p">:</span>
+                        <span class="n">layer</span><span class="o">.</span><span class="n">visible</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">for</span> <span class="n">layer</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">layers</span><span class="p">:</span>
+                        <span class="n">layer</span><span class="o">.</span><span class="n">visible</span> <span class="o">=</span> <span class="kc">False</span>
+
+            <span class="n">all_layers_chk</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">all_layers_chk_changed</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">)</span>
+
+            <span class="n">layers</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="n">lyr</span>
+                <span class="k">for</span> <span class="n">lyr</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">layers</span>
+                <span class="k">if</span> <span class="p">(</span>
+                    <span class="nb">isinstance</span><span class="p">(</span><span class="n">lyr</span><span class="p">,</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">TileLayer</span><span class="p">)</span>
+                    <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">lyr</span><span class="p">,</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">WMSLayer</span><span class="p">)</span>
+                <span class="p">)</span>
+            <span class="p">]</span>
+
+            <span class="c1"># if the layers contain unsupported layers (e.g., GeoJSON, GeoData), adds the ipyleaflet built-in LayerControl</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">layers</span><span class="p">)</span> <span class="o">&lt;</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">layers</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">m</span><span class="o">.</span><span class="n">layer_control</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">layer_control</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">LayersControl</span><span class="p">(</span><span class="n">position</span><span class="o">=</span><span class="s2">&quot;topright&quot;</span><span class="p">)</span>
+                    <span class="n">m</span><span class="o">.</span><span class="n">layer_control</span> <span class="o">=</span> <span class="n">layer_control</span>
+                <span class="k">if</span> <span class="n">m</span><span class="o">.</span><span class="n">layer_control</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">controls</span><span class="p">:</span>
+                    <span class="n">m</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">layer_control</span><span class="p">)</span>
+
+            <span class="c1"># for non-TileLayer, use layer.style={&#39;opacity&#39;:0, &#39;fillOpacity&#39;: 0} to turn layer off.</span>
+            <span class="k">for</span> <span class="n">layer</span> <span class="ow">in</span> <span class="n">layers</span><span class="p">:</span>
+                <span class="n">layer_chk</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Checkbox</span><span class="p">(</span>
+                    <span class="n">value</span><span class="o">=</span><span class="n">layer</span><span class="o">.</span><span class="n">visible</span><span class="p">,</span>
+                    <span class="n">description</span><span class="o">=</span><span class="n">layer</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                    <span class="n">indent</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                    <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="s2">&quot;18px&quot;</span><span class="p">),</span>
+                <span class="p">)</span>
+                <span class="n">layer_chk</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="s2">&quot;25ex&quot;</span>
+                <span class="n">layer_opacity</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatSlider</span><span class="p">(</span>
+                    <span class="n">value</span><span class="o">=</span><span class="n">layer</span><span class="o">.</span><span class="n">opacity</span><span class="p">,</span>
+                    <span class="nb">min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                    <span class="nb">max</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                    <span class="n">step</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span>
+                    <span class="n">readout</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                    <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="s2">&quot;80px&quot;</span><span class="p">),</span>
+                <span class="p">)</span>
+                <span class="n">layer_settings</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">ToggleButton</span><span class="p">(</span>
+                    <span class="n">icon</span><span class="o">=</span><span class="s2">&quot;gear&quot;</span><span class="p">,</span>
+                    <span class="n">tooltip</span><span class="o">=</span><span class="n">layer</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                    <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span>
+                        <span class="n">width</span><span class="o">=</span><span class="s2">&quot;25px&quot;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="s2">&quot;25px&quot;</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s2">&quot;0px 0px 0px 5px&quot;</span>
+                    <span class="p">),</span>
+                <span class="p">)</span>
+
+                <span class="c1"># def layer_vis_on_click(change):</span>
+                <span class="c1">#     if change[&quot;new&quot;]:</span>
+                <span class="c1">#         layer_name = change[&quot;owner&quot;].tooltip</span>
+                <span class="c1">#         change[&quot;owner&quot;].value = False</span>
+
+                <span class="c1"># layer_settings.observe(layer_vis_on_click, &quot;value&quot;)</span>
+
+                <span class="c1"># def layer_chk_changed(change):</span>
+                <span class="c1">#     layer_name = change[&quot;owner&quot;].description</span>
+
+                <span class="c1"># layer_chk.observe(layer_chk_changed, &quot;value&quot;)</span>
+
+                <span class="n">widgets</span><span class="o">.</span><span class="n">jslink</span><span class="p">((</span><span class="n">layer_chk</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">),</span> <span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="s2">&quot;visible&quot;</span><span class="p">))</span>
+                <span class="n">widgets</span><span class="o">.</span><span class="n">jsdlink</span><span class="p">((</span><span class="n">layer_opacity</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">),</span> <span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="s2">&quot;opacity&quot;</span><span class="p">))</span>
+                <span class="n">hbox</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">(</span>
+                    <span class="p">[</span><span class="n">layer_chk</span><span class="p">,</span> <span class="n">layer_settings</span><span class="p">,</span> <span class="n">layer_opacity</span><span class="p">],</span>
+                    <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">padding</span><span class="o">=</span><span class="s2">&quot;0px 8px 0px 8px&quot;</span><span class="p">),</span>
+                <span class="p">)</span>
+                <span class="n">layers_hbox</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">hbox</span><span class="p">)</span>
+
+            <span class="n">toolbar_footer</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="n">layers_hbox</span>
+            <span class="n">toolbar_button</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">toolbar_footer</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[</span><span class="n">toolbar_grid</span><span class="p">]</span>
+
+    <span class="n">layers_button</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">layers_btn_click</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">)</span>
+
+    <span class="n">toolbar_control</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">WidgetControl</span><span class="p">(</span>
+        <span class="n">widget</span><span class="o">=</span><span class="n">toolbar_widget</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;topright&quot;</span>
+    <span class="p">)</span>
+
+    <span class="n">m</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">toolbar_control</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="leafmap.toolbar.open_data_widget" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">open_data_widget</span><span class="p">(</span><span class="n">m</span><span class="p">)</span></code>
+
+
+<a href="#leafmap.toolbar.open_data_widget" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>A widget for opening local vector/raster data.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>m</code></td>
+        <td><code>object</code></td>
+        <td><p>leafmap.Map</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>leafmap/toolbar.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">open_data_widget</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A widget for opening local vector/raster data.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        m (object): leafmap.Map</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">padding</span> <span class="o">=</span> <span class="s2">&quot;0px 0px 0px 5px&quot;</span>
+    <span class="n">style</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;description_width&quot;</span><span class="p">:</span> <span class="s2">&quot;initial&quot;</span><span class="p">}</span>
+
+    <span class="n">file_type</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">ToggleButtons</span><span class="p">(</span>
+        <span class="n">options</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Shapefile&quot;</span><span class="p">,</span> <span class="s2">&quot;GeoJSON&quot;</span><span class="p">,</span> <span class="s2">&quot;Vector&quot;</span><span class="p">,</span> <span class="s2">&quot;CSV&quot;</span><span class="p">,</span> <span class="s2">&quot;GeoTIFF&quot;</span><span class="p">],</span>
+        <span class="n">tooltips</span><span class="o">=</span><span class="p">[</span>
+            <span class="s2">&quot;Open a shapefile&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Open a GeoJSON file&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Open a vector dataset&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Create points from CSV&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Open a vector dataset&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Open a GeoTIFF&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">)</span>
+    <span class="n">file_type</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">button_width</span> <span class="o">=</span> <span class="s2">&quot;88px&quot;</span>
+
+    <span class="n">filepath</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span>
+        <span class="n">value</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;File path or HTTP URL:&quot;</span><span class="p">,</span>
+        <span class="n">tooltip</span><span class="o">=</span><span class="s2">&quot;Enter a file path or HTTP URL to vector data&quot;</span><span class="p">,</span>
+        <span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">,</span>
+        <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="s2">&quot;454px&quot;</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="n">padding</span><span class="p">),</span>
+    <span class="p">)</span>
+    <span class="n">http_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">()</span>
+
+    <span class="n">file_chooser</span> <span class="o">=</span> <span class="n">FileChooser</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="n">sandbox_path</span><span class="o">=</span><span class="n">m</span><span class="o">.</span><span class="n">sandbox_path</span><span class="p">)</span>
+    <span class="n">file_chooser</span><span class="o">.</span><span class="n">filter_pattern</span> <span class="o">=</span> <span class="s2">&quot;*.shp&quot;</span>
+    <span class="n">file_chooser</span><span class="o">.</span><span class="n">use_dir_icons</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="n">layer_name</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span>
+        <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Shapefile&quot;</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Enter a layer name:&quot;</span><span class="p">,</span>
+        <span class="n">tooltip</span><span class="o">=</span><span class="s2">&quot;Enter a layer name for the selected file&quot;</span><span class="p">,</span>
+        <span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">,</span>
+        <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="s2">&quot;454px&quot;</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="n">padding</span><span class="p">),</span>
+    <span class="p">)</span>
+
+    <span class="n">longitude</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Dropdown</span><span class="p">(</span>
+        <span class="n">options</span><span class="o">=</span><span class="p">[],</span>
+        <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Longitude:&quot;</span><span class="p">,</span>
+        <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="s2">&quot;149px&quot;</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="n">padding</span><span class="p">),</span>
+        <span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">latitude</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Dropdown</span><span class="p">(</span>
+        <span class="n">options</span><span class="o">=</span><span class="p">[],</span>
+        <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Latitude:&quot;</span><span class="p">,</span>
+        <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="s2">&quot;149px&quot;</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="n">padding</span><span class="p">),</span>
+        <span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">label</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Dropdown</span><span class="p">(</span>
+        <span class="n">options</span><span class="o">=</span><span class="p">[],</span>
+        <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Label:&quot;</span><span class="p">,</span>
+        <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="s2">&quot;149px&quot;</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="n">padding</span><span class="p">),</span>
+        <span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">point_check</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Checkbox</span><span class="p">(</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Is it a point layer?&quot;</span><span class="p">,</span>
+        <span class="n">indent</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">padding</span><span class="o">=</span><span class="n">padding</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;150px&quot;</span><span class="p">),</span>
+        <span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">point_popup</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">SelectMultiple</span><span class="p">(</span>
+        <span class="n">options</span><span class="o">=</span><span class="p">[</span>
+            <span class="s2">&quot;None&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="n">value</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;None&quot;</span><span class="p">],</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Popup attributes:&quot;</span><span class="p">,</span>
+        <span class="n">disabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">csv_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">()</span>
+    <span class="n">point_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">point_layer_check</span><span class="p">(</span><span class="n">change</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">point_check</span><span class="o">.</span><span class="n">value</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">filepath</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                <span class="n">m</span><span class="o">.</span><span class="n">default_style</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;cursor&quot;</span><span class="p">:</span> <span class="s2">&quot;wait&quot;</span><span class="p">}</span>
+                <span class="n">point_popup</span><span class="o">.</span><span class="n">options</span> <span class="o">=</span> <span class="n">vector_col_names</span><span class="p">(</span><span class="n">filepath</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+                <span class="n">point_popup</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="p">[</span><span class="n">point_popup</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+
+            <span class="n">point_widget</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[</span><span class="n">point_check</span><span class="p">,</span> <span class="n">point_popup</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">point_widget</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[</span><span class="n">point_check</span><span class="p">]</span>
+
+    <span class="n">point_check</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">point_layer_check</span><span class="p">)</span>
+
+    <span class="n">ok_cancel</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">ToggleButtons</span><span class="p">(</span>
+        <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">options</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Apply&quot;</span><span class="p">,</span> <span class="s2">&quot;Reset&quot;</span><span class="p">,</span> <span class="s2">&quot;Close&quot;</span><span class="p">],</span>
+        <span class="n">tooltips</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Apply&quot;</span><span class="p">,</span> <span class="s2">&quot;Reset&quot;</span><span class="p">,</span> <span class="s2">&quot;Close&quot;</span><span class="p">],</span>
+        <span class="n">button_style</span><span class="o">=</span><span class="s2">&quot;primary&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="c1"># ok_cancel.style.button_width = &quot;133px&quot;</span>
+
+    <span class="n">bands</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span>
+        <span class="n">value</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Bands:&quot;</span><span class="p">,</span>
+        <span class="n">tooltip</span><span class="o">=</span><span class="s2">&quot;Enter a list of band indices&quot;</span><span class="p">,</span>
+        <span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">,</span>
+        <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="s2">&quot;110px&quot;</span><span class="p">),</span>
+    <span class="p">)</span>
+
+    <span class="n">colormap</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Dropdown</span><span class="p">(</span>
+        <span class="n">options</span><span class="o">=</span><span class="p">[],</span>
+        <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;colormap:&quot;</span><span class="p">,</span>
+        <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="s2">&quot;172px&quot;</span><span class="p">),</span>
+        <span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">x_dim</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span>
+        <span class="n">value</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;x_dim:&quot;</span><span class="p">,</span>
+        <span class="n">tooltip</span><span class="o">=</span><span class="s2">&quot;The x dimension&quot;</span><span class="p">,</span>
+        <span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">,</span>
+        <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="s2">&quot;80px&quot;</span><span class="p">),</span>
+    <span class="p">)</span>
+
+    <span class="n">y_dim</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span>
+        <span class="n">value</span><span class="o">=</span><span class="s2">&quot;y&quot;</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;y_dim:&quot;</span><span class="p">,</span>
+        <span class="n">tooltip</span><span class="o">=</span><span class="s2">&quot;The xydimension&quot;</span><span class="p">,</span>
+        <span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">,</span>
+        <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="s2">&quot;80px&quot;</span><span class="p">),</span>
+    <span class="p">)</span>
+
+    <span class="n">raster_options</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">filepath_change</span><span class="p">(</span><span class="n">change</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">file_type</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="s2">&quot;GeoTIFF&quot;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="p">(</span>
+                <span class="n">filepath</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;http&quot;</span><span class="p">)</span>
+                <span class="ow">or</span> <span class="n">filepath</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.txt&quot;</span><span class="p">)</span>
+                <span class="ow">or</span> <span class="n">filepath</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.csv&quot;</span><span class="p">)</span>
+            <span class="p">):</span>
+                <span class="n">bands</span><span class="o">.</span><span class="n">disabled</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="n">colormap</span><span class="o">.</span><span class="n">disabled</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="n">x_dim</span><span class="o">.</span><span class="n">disabled</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="n">y_dim</span><span class="o">.</span><span class="n">disabled</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">bands</span><span class="o">.</span><span class="n">disabled</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="n">colormap</span><span class="o">.</span><span class="n">disabled</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="n">x_dim</span><span class="o">.</span><span class="n">disabled</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="n">y_dim</span><span class="o">.</span><span class="n">disabled</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="n">filepath</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">filepath_change</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">)</span>
+
+    <span class="n">tool_output</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">(</span>
+        <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">max_height</span><span class="o">=</span><span class="s2">&quot;150px&quot;</span><span class="p">,</span> <span class="n">max_width</span><span class="o">=</span><span class="s2">&quot;500px&quot;</span><span class="p">,</span> <span class="n">overflow</span><span class="o">=</span><span class="s2">&quot;auto&quot;</span><span class="p">)</span>
+    <span class="p">)</span>
+
+    <span class="n">main_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">(</span>
+        <span class="p">[</span>
+            <span class="n">file_type</span><span class="p">,</span>
+            <span class="n">file_chooser</span><span class="p">,</span>
+            <span class="n">http_widget</span><span class="p">,</span>
+            <span class="n">csv_widget</span><span class="p">,</span>
+            <span class="n">layer_name</span><span class="p">,</span>
+            <span class="n">point_widget</span><span class="p">,</span>
+            <span class="n">raster_options</span><span class="p">,</span>
+            <span class="n">ok_cancel</span><span class="p">,</span>
+            <span class="n">tool_output</span><span class="p">,</span>
+        <span class="p">]</span>
+    <span class="p">)</span>
+
+    <span class="n">tool_output_ctrl</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">WidgetControl</span><span class="p">(</span><span class="n">widget</span><span class="o">=</span><span class="n">main_widget</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;topright&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">m</span><span class="o">.</span><span class="n">tool_output_ctrl</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">m</span><span class="o">.</span><span class="n">tool_output_ctrl</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">controls</span><span class="p">:</span>
+        <span class="n">m</span><span class="o">.</span><span class="n">remove_control</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">tool_output_ctrl</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">bands_changed</span><span class="p">(</span><span class="n">change</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">change</span><span class="p">[</span><span class="s2">&quot;new&quot;</span><span class="p">]</span> <span class="ow">and</span> <span class="s2">&quot;,&quot;</span> <span class="ow">in</span> <span class="n">change</span><span class="p">[</span><span class="s2">&quot;owner&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">:</span>
+            <span class="n">colormap</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="n">colormap</span><span class="o">.</span><span class="n">disabled</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">colormap</span><span class="o">.</span><span class="n">disabled</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="n">bands</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">bands_changed</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">chooser_callback</span><span class="p">(</span><span class="n">chooser</span><span class="p">):</span>
+
+        <span class="n">filepath</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">file_chooser</span><span class="o">.</span><span class="n">selected</span>
+
+        <span class="k">if</span> <span class="n">file_type</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="s2">&quot;CSV&quot;</span><span class="p">:</span>
+            <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+            <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filepath</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+            <span class="n">col_names</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+            <span class="n">longitude</span><span class="o">.</span><span class="n">options</span> <span class="o">=</span> <span class="n">col_names</span>
+            <span class="n">latitude</span><span class="o">.</span><span class="n">options</span> <span class="o">=</span> <span class="n">col_names</span>
+            <span class="n">label</span><span class="o">.</span><span class="n">options</span> <span class="o">=</span> <span class="n">col_names</span>
+
+            <span class="k">if</span> <span class="s2">&quot;longitude&quot;</span> <span class="ow">in</span> <span class="n">col_names</span><span class="p">:</span>
+                <span class="n">longitude</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s2">&quot;longitude&quot;</span>
+            <span class="k">if</span> <span class="s2">&quot;latitude&quot;</span> <span class="ow">in</span> <span class="n">col_names</span><span class="p">:</span>
+                <span class="n">latitude</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s2">&quot;latitude&quot;</span>
+            <span class="k">if</span> <span class="s2">&quot;name&quot;</span> <span class="ow">in</span> <span class="n">col_names</span><span class="p">:</span>
+                <span class="n">label</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s2">&quot;name&quot;</span>
+
+    <span class="n">file_chooser</span><span class="o">.</span><span class="n">register_callback</span><span class="p">(</span><span class="n">chooser_callback</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">file_type_changed</span><span class="p">(</span><span class="n">change</span><span class="p">):</span>
+        <span class="n">ok_cancel</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">file_chooser</span><span class="o">.</span><span class="n">default_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+        <span class="n">file_chooser</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+        <span class="n">layer_name</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">file_type</span><span class="o">.</span><span class="n">value</span>
+        <span class="n">csv_widget</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">filepath</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="n">tool_output</span><span class="o">.</span><span class="n">clear_output</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">change</span><span class="p">[</span><span class="s2">&quot;new&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Shapefile&quot;</span><span class="p">:</span>
+            <span class="n">file_chooser</span><span class="o">.</span><span class="n">filter_pattern</span> <span class="o">=</span> <span class="s2">&quot;*.shp&quot;</span>
+            <span class="n">raster_options</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">point_widget</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">point_check</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="n">http_widget</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">elif</span> <span class="n">change</span><span class="p">[</span><span class="s2">&quot;new&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;GeoJSON&quot;</span><span class="p">:</span>
+            <span class="n">file_chooser</span><span class="o">.</span><span class="n">filter_pattern</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;*.geojson&quot;</span><span class="p">,</span> <span class="s2">&quot;*.json&quot;</span><span class="p">]</span>
+            <span class="n">raster_options</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">point_widget</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">point_check</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="n">http_widget</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[</span><span class="n">filepath</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">change</span><span class="p">[</span><span class="s2">&quot;new&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Vector&quot;</span><span class="p">:</span>
+            <span class="n">file_chooser</span><span class="o">.</span><span class="n">filter_pattern</span> <span class="o">=</span> <span class="s2">&quot;*.*&quot;</span>
+            <span class="n">raster_options</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">point_widget</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[</span><span class="n">point_check</span><span class="p">]</span>
+            <span class="n">point_check</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="n">http_widget</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[</span><span class="n">filepath</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">change</span><span class="p">[</span><span class="s2">&quot;new&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;CSV&quot;</span><span class="p">:</span>
+            <span class="n">file_chooser</span><span class="o">.</span><span class="n">filter_pattern</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;*.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;*.CSV&quot;</span><span class="p">]</span>
+            <span class="n">csv_widget</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[</span><span class="n">longitude</span><span class="p">,</span> <span class="n">latitude</span><span class="p">,</span> <span class="n">label</span><span class="p">]</span>
+            <span class="n">raster_options</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">point_widget</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">point_check</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="n">http_widget</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[</span><span class="n">filepath</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">change</span><span class="p">[</span><span class="s2">&quot;new&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;GeoTIFF&quot;</span><span class="p">:</span>
+            <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+            <span class="n">file_chooser</span><span class="o">.</span><span class="n">filter_pattern</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;*.tif&quot;</span><span class="p">,</span> <span class="s2">&quot;*.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;*.txt&quot;</span><span class="p">]</span>
+            <span class="n">colormap</span><span class="o">.</span><span class="n">options</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">colormaps</span><span class="p">()</span>
+            <span class="n">colormap</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s2">&quot;terrain&quot;</span>
+            <span class="n">raster_options</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[</span><span class="n">bands</span><span class="p">,</span> <span class="n">colormap</span><span class="p">,</span> <span class="n">x_dim</span><span class="p">,</span> <span class="n">y_dim</span><span class="p">]</span>
+            <span class="n">point_widget</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">point_check</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="n">http_widget</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[</span><span class="n">filepath</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">ok_cancel_clicked</span><span class="p">(</span><span class="n">change</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">change</span><span class="p">[</span><span class="s2">&quot;new&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Apply&quot;</span><span class="p">:</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">default_style</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;cursor&quot;</span><span class="p">:</span> <span class="s2">&quot;wait&quot;</span><span class="p">}</span>
+            <span class="n">file_path</span> <span class="o">=</span> <span class="n">filepath</span><span class="o">.</span><span class="n">value</span>
+
+            <span class="k">with</span> <span class="n">tool_output</span><span class="p">:</span>
+                <span class="n">tool_output</span><span class="o">.</span><span class="n">clear_output</span><span class="p">()</span>
+                <span class="k">if</span> <span class="n">file_path</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                    <span class="n">ext</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">file_path</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+                    <span class="k">if</span> <span class="n">point_check</span><span class="o">.</span><span class="n">value</span><span class="p">:</span>
+                        <span class="n">popup</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">point_popup</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+                        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">popup</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                            <span class="n">popup</span> <span class="o">=</span> <span class="n">popup</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                        <span class="n">m</span><span class="o">.</span><span class="n">add_point_layer</span><span class="p">(</span>
+                            <span class="n">file_path</span><span class="p">,</span>
+                            <span class="n">popup</span><span class="o">=</span><span class="n">popup</span><span class="p">,</span>
+                            <span class="n">layer_name</span><span class="o">=</span><span class="n">layer_name</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                        <span class="p">)</span>
+                    <span class="k">elif</span> <span class="n">ext</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;.shp&quot;</span><span class="p">:</span>
+                        <span class="n">m</span><span class="o">.</span><span class="n">add_shp</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">layer_name</span><span class="o">=</span><span class="n">layer_name</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+                    <span class="k">elif</span> <span class="n">ext</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;.geojson&quot;</span><span class="p">:</span>
+
+                        <span class="n">m</span><span class="o">.</span><span class="n">add_geojson</span><span class="p">(</span>
+                            <span class="n">file_path</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">layer_name</span><span class="o">=</span><span class="n">layer_name</span><span class="o">.</span><span class="n">value</span>
+                        <span class="p">)</span>
+
+                    <span class="k">elif</span> <span class="n">ext</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;.csv&quot;</span> <span class="ow">and</span> <span class="n">file_type</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="s2">&quot;CSV&quot;</span><span class="p">:</span>
+
+                        <span class="n">m</span><span class="o">.</span><span class="n">add_xy_data</span><span class="p">(</span>
+                            <span class="n">file_path</span><span class="p">,</span>
+                            <span class="n">x</span><span class="o">=</span><span class="n">longitude</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                            <span class="n">y</span><span class="o">=</span><span class="n">latitude</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                            <span class="n">label</span><span class="o">=</span><span class="n">label</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                            <span class="n">layer_name</span><span class="o">=</span><span class="n">layer_name</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                        <span class="p">)</span>
+
+                    <span class="k">elif</span> <span class="n">ext</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;.tif&quot;</span> <span class="ow">and</span> <span class="n">file_type</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="s2">&quot;GeoTIFF&quot;</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="n">file_path</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;http&quot;</span><span class="p">):</span>
+                            <span class="n">m</span><span class="o">.</span><span class="n">add_cog_layer</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">layer_name</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+                        <span class="k">else</span><span class="p">:</span>
+                            <span class="n">sel_bands</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">bands</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)]</span>
+                            <span class="n">m</span><span class="o">.</span><span class="n">add_raster</span><span class="p">(</span>
+                                <span class="n">image</span><span class="o">=</span><span class="n">file_path</span><span class="p">,</span>
+                                <span class="n">bands</span><span class="o">=</span><span class="n">sel_bands</span><span class="p">,</span>
+                                <span class="n">layer_name</span><span class="o">=</span><span class="n">layer_name</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                <span class="n">colormap</span><span class="o">=</span><span class="n">colormap</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                <span class="n">x_dim</span><span class="o">=</span><span class="n">x_dim</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                <span class="n">y_dim</span><span class="o">=</span><span class="n">y_dim</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                            <span class="p">)</span>
+                    <span class="k">elif</span> <span class="n">file_type</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="s2">&quot;GeoTIFF&quot;</span> <span class="ow">and</span> <span class="n">ext</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="p">[</span>
+                        <span class="s2">&quot;.csv&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;.txt&quot;</span><span class="p">,</span>
+                    <span class="p">]:</span>
+                        <span class="n">m</span><span class="o">.</span><span class="n">add_cog_mosaic_from_file</span><span class="p">(</span>
+                            <span class="n">file_path</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">layer_name</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">show_footprints</span><span class="o">=</span><span class="kc">True</span>
+                        <span class="p">)</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">m</span><span class="o">.</span><span class="n">add_vector</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">layer_name</span><span class="o">=</span><span class="n">layer_name</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Please select a file to open.&quot;</span><span class="p">)</span>
+
+            <span class="n">m</span><span class="o">.</span><span class="n">toolbar_reset</span><span class="p">()</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">default_style</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;cursor&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">}</span>
+
+        <span class="k">elif</span> <span class="n">change</span><span class="p">[</span><span class="s2">&quot;new&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Reset&quot;</span><span class="p">:</span>
+            <span class="n">file_chooser</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+            <span class="n">tool_output</span><span class="o">.</span><span class="n">clear_output</span><span class="p">()</span>
+            <span class="n">filepath</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">toolbar_reset</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">change</span><span class="p">[</span><span class="s2">&quot;new&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Close&quot;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">m</span><span class="o">.</span><span class="n">tool_output_ctrl</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">m</span><span class="o">.</span><span class="n">tool_output_ctrl</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">controls</span><span class="p">:</span>
+                <span class="n">m</span><span class="o">.</span><span class="n">remove_control</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">tool_output_ctrl</span><span class="p">)</span>
+                <span class="n">m</span><span class="o">.</span><span class="n">tool_output_ctrl</span> <span class="o">=</span> <span class="kc">None</span>
+                <span class="n">m</span><span class="o">.</span><span class="n">toolbar_reset</span><span class="p">()</span>
+
+        <span class="n">ok_cancel</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="n">file_type</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">file_type_changed</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="s2">&quot;value&quot;</span><span class="p">)</span>
+    <span class="n">ok_cancel</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">ok_cancel_clicked</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="s2">&quot;value&quot;</span><span class="p">)</span>
+    <span class="c1"># file_chooser.register_callback(chooser_callback)</span>
+
+    <span class="n">m</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">tool_output_ctrl</span><span class="p">)</span>
+    <span class="n">m</span><span class="o">.</span><span class="n">tool_output_ctrl</span> <span class="o">=</span> <span class="n">tool_output_ctrl</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="leafmap.toolbar.save_map" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">save_map</span><span class="p">(</span><span class="n">m</span><span class="p">)</span></code>
+
+
+<a href="#leafmap.toolbar.save_map" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Saves the map as HTML, JPG, or PNG.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>m</code></td>
+        <td><code>leafmap.Map</code></td>
+        <td><p>The leafmap Map object.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>leafmap/toolbar.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">save_map</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Saves the map as HTML, JPG, or PNG.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        m (leafmap.Map): The leafmap Map object.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">import</span> <span class="nn">time</span>
+
+    <span class="n">tool_output</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">()</span>
+    <span class="n">m</span><span class="o">.</span><span class="n">tool_output</span> <span class="o">=</span> <span class="n">tool_output</span>
+    <span class="n">tool_output</span><span class="o">.</span><span class="n">clear_output</span><span class="p">(</span><span class="n">wait</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">save_map_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">()</span>
+
+    <span class="n">save_type</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">ToggleButtons</span><span class="p">(</span>
+        <span class="n">options</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;HTML&quot;</span><span class="p">,</span> <span class="s2">&quot;PNG&quot;</span><span class="p">,</span> <span class="s2">&quot;JPG&quot;</span><span class="p">],</span>
+        <span class="n">tooltips</span><span class="o">=</span><span class="p">[</span>
+            <span class="s2">&quot;Save the map as an HTML file&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Take a screenshot and save as a PNG file&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Take a screenshot and save as a JPG file&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">)</span>
+
+    <span class="n">file_chooser</span> <span class="o">=</span> <span class="n">FileChooser</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="n">sandbox_path</span><span class="o">=</span><span class="n">m</span><span class="o">.</span><span class="n">sandbox_path</span><span class="p">)</span>
+    <span class="n">file_chooser</span><span class="o">.</span><span class="n">default_filename</span> <span class="o">=</span> <span class="s2">&quot;my_map.html&quot;</span>
+    <span class="n">file_chooser</span><span class="o">.</span><span class="n">use_dir_icons</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="n">ok_cancel</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">ToggleButtons</span><span class="p">(</span>
+        <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">options</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;OK&quot;</span><span class="p">,</span> <span class="s2">&quot;Cancel&quot;</span><span class="p">,</span> <span class="s2">&quot;Close&quot;</span><span class="p">],</span>
+        <span class="n">tooltips</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;OK&quot;</span><span class="p">,</span> <span class="s2">&quot;Cancel&quot;</span><span class="p">,</span> <span class="s2">&quot;Close&quot;</span><span class="p">],</span>
+        <span class="n">button_style</span><span class="o">=</span><span class="s2">&quot;primary&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">save_type_changed</span><span class="p">(</span><span class="n">change</span><span class="p">):</span>
+        <span class="n">ok_cancel</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="c1"># file_chooser.reset()</span>
+        <span class="n">file_chooser</span><span class="o">.</span><span class="n">default_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">change</span><span class="p">[</span><span class="s2">&quot;new&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;HTML&quot;</span><span class="p">:</span>
+            <span class="n">file_chooser</span><span class="o">.</span><span class="n">default_filename</span> <span class="o">=</span> <span class="s2">&quot;my_map.html&quot;</span>
+        <span class="k">elif</span> <span class="n">change</span><span class="p">[</span><span class="s2">&quot;new&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;PNG&quot;</span><span class="p">:</span>
+            <span class="n">file_chooser</span><span class="o">.</span><span class="n">default_filename</span> <span class="o">=</span> <span class="s2">&quot;my_map.png&quot;</span>
+        <span class="k">elif</span> <span class="n">change</span><span class="p">[</span><span class="s2">&quot;new&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;JPG&quot;</span><span class="p">:</span>
+            <span class="n">file_chooser</span><span class="o">.</span><span class="n">default_filename</span> <span class="o">=</span> <span class="s2">&quot;my_map.jpg&quot;</span>
+        <span class="n">save_map_widget</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[</span><span class="n">save_type</span><span class="p">,</span> <span class="n">file_chooser</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">chooser_callback</span><span class="p">(</span><span class="n">chooser</span><span class="p">):</span>
+        <span class="n">save_map_widget</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[</span><span class="n">save_type</span><span class="p">,</span> <span class="n">file_chooser</span><span class="p">,</span> <span class="n">ok_cancel</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">ok_cancel_clicked</span><span class="p">(</span><span class="n">change</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">change</span><span class="p">[</span><span class="s2">&quot;new&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;OK&quot;</span><span class="p">:</span>
+            <span class="n">file_path</span> <span class="o">=</span> <span class="n">file_chooser</span><span class="o">.</span><span class="n">selected</span>
+            <span class="n">ext</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">file_path</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">save_type</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="s2">&quot;HTML&quot;</span> <span class="ow">and</span> <span class="n">ext</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;.HTML&quot;</span><span class="p">:</span>
+                <span class="n">tool_output</span><span class="o">.</span><span class="n">clear_output</span><span class="p">()</span>
+                <span class="n">m</span><span class="o">.</span><span class="n">to_html</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">save_type</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="s2">&quot;PNG&quot;</span> <span class="ow">and</span> <span class="n">ext</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;.PNG&quot;</span><span class="p">:</span>
+                <span class="n">tool_output</span><span class="o">.</span><span class="n">clear_output</span><span class="p">()</span>
+                <span class="n">m</span><span class="o">.</span><span class="n">toolbar_button</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="k">if</span> <span class="n">m</span><span class="o">.</span><span class="n">save_map_control</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">m</span><span class="o">.</span><span class="n">remove_control</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">save_map_control</span><span class="p">)</span>
+                    <span class="n">m</span><span class="o">.</span><span class="n">save_map_control</span> <span class="o">=</span> <span class="kc">None</span>
+                <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+                <span class="n">screen_capture</span><span class="p">(</span><span class="n">outfile</span><span class="o">=</span><span class="n">file_path</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">save_type</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="s2">&quot;JPG&quot;</span> <span class="ow">and</span> <span class="n">ext</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;.JPG&quot;</span><span class="p">:</span>
+                <span class="n">tool_output</span><span class="o">.</span><span class="n">clear_output</span><span class="p">()</span>
+                <span class="n">m</span><span class="o">.</span><span class="n">toolbar_button</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="k">if</span> <span class="n">m</span><span class="o">.</span><span class="n">save_map_control</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">m</span><span class="o">.</span><span class="n">remove_control</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">save_map_control</span><span class="p">)</span>
+                    <span class="n">m</span><span class="o">.</span><span class="n">save_map_control</span> <span class="o">=</span> <span class="kc">None</span>
+                <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+                <span class="n">screen_capture</span><span class="p">(</span><span class="n">outfile</span><span class="o">=</span><span class="n">file_path</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">label</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span>
+                    <span class="n">value</span><span class="o">=</span><span class="s2">&quot;The selected file extension does not match the selected exporting type.&quot;</span>
+                <span class="p">)</span>
+                <span class="n">save_map_widget</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[</span><span class="n">save_type</span><span class="p">,</span> <span class="n">file_chooser</span><span class="p">,</span> <span class="n">label</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">change</span><span class="p">[</span><span class="s2">&quot;new&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Cancel&quot;</span><span class="p">:</span>
+            <span class="n">tool_output</span><span class="o">.</span><span class="n">clear_output</span><span class="p">()</span>
+            <span class="n">file_chooser</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">change</span><span class="p">[</span><span class="s2">&quot;new&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Close&quot;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">m</span><span class="o">.</span><span class="n">save_map_control</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">m</span><span class="o">.</span><span class="n">remove_control</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">save_map_control</span><span class="p">)</span>
+                <span class="n">m</span><span class="o">.</span><span class="n">save_map_control</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">ok_cancel</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">m</span><span class="o">.</span><span class="n">toolbar_reset</span><span class="p">()</span>
+
+    <span class="n">save_type</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">save_type_changed</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="s2">&quot;value&quot;</span><span class="p">)</span>
+    <span class="n">ok_cancel</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">ok_cancel_clicked</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="s2">&quot;value&quot;</span><span class="p">)</span>
+
+    <span class="n">file_chooser</span><span class="o">.</span><span class="n">register_callback</span><span class="p">(</span><span class="n">chooser_callback</span><span class="p">)</span>
+
+    <span class="n">save_map_widget</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[</span><span class="n">save_type</span><span class="p">,</span> <span class="n">file_chooser</span><span class="p">]</span>
+    <span class="n">save_map_control</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">WidgetControl</span><span class="p">(</span>
+        <span class="n">widget</span><span class="o">=</span><span class="n">save_map_widget</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;topright&quot;</span>
+    <span class="p">)</span>
+    <span class="n">m</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">save_map_control</span><span class="p">)</span>
+    <span class="n">m</span><span class="o">.</span><span class="n">save_map_control</span> <span class="o">=</span> <span class="n">save_map_control</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="leafmap.toolbar.time_slider" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">time_slider</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">layers_dict</span><span class="o">=</span><span class="p">{},</span> <span class="n">labels</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">time_interval</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s1">&#39;bottomright&#39;</span><span class="p">,</span> <span class="n">slider_length</span><span class="o">=</span><span class="s1">&#39;150px&#39;</span><span class="p">)</span></code>
+
+
+<a href="#leafmap.toolbar.time_slider" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Adds a time slider to the map.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>layers_dict</code></td>
+        <td><code>dict</code></td>
+        <td><p>The dictionary containing a set of XYZ tile layers.</p></td>
+        <td><code>{}</code></td>
+      </tr>
+      <tr>
+        <td><code>labels</code></td>
+        <td><code>list</code></td>
+        <td><p>The list of labels to be used for the time series. Defaults to None.</p></td>
+        <td><code>None</code></td>
+      </tr>
+      <tr>
+        <td><code>time_interval</code></td>
+        <td><code>int</code></td>
+        <td><p>Time interval in seconds. Defaults to 1.</p></td>
+        <td><code>1</code></td>
+      </tr>
+      <tr>
+        <td><code>position</code></td>
+        <td><code>str</code></td>
+        <td><p>Position to place the time slider, can be any of ['topleft', 'topright', 'bottomleft', 'bottomright']. Defaults to "bottomright".</p></td>
+        <td><code>&#39;bottomright&#39;</code></td>
+      </tr>
+      <tr>
+        <td><code>slider_length</code></td>
+        <td><code>str</code></td>
+        <td><p>Length of the time slider. Defaults to "150px".</p></td>
+        <td><code>&#39;150px&#39;</code></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>leafmap/toolbar.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">time_slider</span><span class="p">(</span>
+    <span class="n">m</span><span class="p">,</span>
+    <span class="n">layers_dict</span><span class="o">=</span><span class="p">{},</span>
+    <span class="n">labels</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">time_interval</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">position</span><span class="o">=</span><span class="s2">&quot;bottomright&quot;</span><span class="p">,</span>
+    <span class="n">slider_length</span><span class="o">=</span><span class="s2">&quot;150px&quot;</span><span class="p">,</span>
+<span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Adds a time slider to the map.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        layers_dict (dict, optional): The dictionary containing a set of XYZ tile layers.</span>
+<span class="sd">        labels (list, optional): The list of labels to be used for the time series. Defaults to None.</span>
+<span class="sd">        time_interval (int, optional): Time interval in seconds. Defaults to 1.</span>
+<span class="sd">        position (str, optional): Position to place the time slider, can be any of [&#39;topleft&#39;, &#39;topright&#39;, &#39;bottomleft&#39;, &#39;bottomright&#39;]. Defaults to &quot;bottomright&quot;.</span>
+<span class="sd">        slider_length (str, optional): Length of the time slider. Defaults to &quot;150px&quot;.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">import</span> <span class="nn">time</span>
+    <span class="kn">import</span> <span class="nn">threading</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">layers_dict</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;The layers_dict must be a dictionary.&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">layers_dict</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">layers_dict</span> <span class="o">=</span> <span class="n">planet_monthly_tiles</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">labels</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">labels</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">layers_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">layers_dict</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;The length of labels is not equal to that of layers_dict.&quot;</span><span class="p">)</span>
+
+    <span class="n">slider</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">IntSlider</span><span class="p">(</span>
+        <span class="nb">min</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="nb">max</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">labels</span><span class="p">),</span>
+        <span class="n">readout</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">continuous_update</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="n">slider_length</span><span class="p">),</span>
+    <span class="p">)</span>
+    <span class="n">label</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span>
+        <span class="n">value</span><span class="o">=</span><span class="n">labels</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">padding</span><span class="o">=</span><span class="s2">&quot;0px 5px 0px 5px&quot;</span><span class="p">)</span>
+    <span class="p">)</span>
+
+    <span class="n">play_btn</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span>
+        <span class="n">icon</span><span class="o">=</span><span class="s2">&quot;play&quot;</span><span class="p">,</span>
+        <span class="n">tooltip</span><span class="o">=</span><span class="s2">&quot;Play the time slider&quot;</span><span class="p">,</span>
+        <span class="n">button_style</span><span class="o">=</span><span class="s2">&quot;primary&quot;</span><span class="p">,</span>
+        <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="s2">&quot;32px&quot;</span><span class="p">),</span>
+    <span class="p">)</span>
+
+    <span class="n">pause_btn</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span>
+        <span class="n">icon</span><span class="o">=</span><span class="s2">&quot;pause&quot;</span><span class="p">,</span>
+        <span class="n">tooltip</span><span class="o">=</span><span class="s2">&quot;Pause the time slider&quot;</span><span class="p">,</span>
+        <span class="n">button_style</span><span class="o">=</span><span class="s2">&quot;primary&quot;</span><span class="p">,</span>
+        <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="s2">&quot;32px&quot;</span><span class="p">),</span>
+    <span class="p">)</span>
+
+    <span class="n">close_btn</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span>
+        <span class="n">icon</span><span class="o">=</span><span class="s2">&quot;times&quot;</span><span class="p">,</span>
+        <span class="n">tooltip</span><span class="o">=</span><span class="s2">&quot;Close the time slider&quot;</span><span class="p">,</span>
+        <span class="n">button_style</span><span class="o">=</span><span class="s2">&quot;primary&quot;</span><span class="p">,</span>
+        <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="s2">&quot;32px&quot;</span><span class="p">),</span>
+    <span class="p">)</span>
+
+    <span class="n">play_chk</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Checkbox</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+    <span class="n">slider_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">([</span><span class="n">label</span><span class="p">,</span> <span class="n">slider</span><span class="p">,</span> <span class="n">play_btn</span><span class="p">,</span> <span class="n">pause_btn</span><span class="p">,</span> <span class="n">close_btn</span><span class="p">])</span>
+
+    <span class="k">def</span> <span class="nf">play_click</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
+
+        <span class="n">play_chk</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="kc">True</span>
+
+        <span class="k">def</span> <span class="nf">work</span><span class="p">(</span><span class="n">slider</span><span class="p">):</span>
+            <span class="k">while</span> <span class="n">play_chk</span><span class="o">.</span><span class="n">value</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">slider</span><span class="o">.</span><span class="n">value</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">labels</span><span class="p">):</span>
+                    <span class="n">slider</span><span class="o">.</span><span class="n">value</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">slider</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">1</span>
+                <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">time_interval</span><span class="p">)</span>
+
+        <span class="n">thread</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">work</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">slider</span><span class="p">,))</span>
+        <span class="n">thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">pause_click</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
+        <span class="n">play_chk</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="n">play_btn</span><span class="o">.</span><span class="n">on_click</span><span class="p">(</span><span class="n">play_click</span><span class="p">)</span>
+    <span class="n">pause_btn</span><span class="o">.</span><span class="n">on_click</span><span class="p">(</span><span class="n">pause_click</span><span class="p">)</span>
+
+    <span class="n">keys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">layers_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+    <span class="n">layer</span> <span class="o">=</span> <span class="n">layers_dict</span><span class="p">[</span><span class="n">keys</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+    <span class="n">m</span><span class="o">.</span><span class="n">add_layer</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">slider_changed</span><span class="p">(</span><span class="n">change</span><span class="p">):</span>
+        <span class="n">m</span><span class="o">.</span><span class="n">default_style</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;cursor&quot;</span><span class="p">:</span> <span class="s2">&quot;wait&quot;</span><span class="p">}</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="n">slider</span><span class="o">.</span><span class="n">value</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="n">label</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">labels</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+        <span class="n">layer</span><span class="o">.</span><span class="n">url</span> <span class="o">=</span> <span class="n">layers_dict</span><span class="p">[</span><span class="n">label</span><span class="o">.</span><span class="n">value</span><span class="p">]</span><span class="o">.</span><span class="n">url</span>
+        <span class="n">layer</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">layers_dict</span><span class="p">[</span><span class="n">label</span><span class="o">.</span><span class="n">value</span><span class="p">]</span><span class="o">.</span><span class="n">name</span>
+        <span class="n">m</span><span class="o">.</span><span class="n">default_style</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;cursor&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">}</span>
+
+    <span class="n">slider</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">slider_changed</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">close_click</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
+        <span class="n">play_chk</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="n">m</span><span class="o">.</span><span class="n">toolbar_reset</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">m</span><span class="o">.</span><span class="n">slider_ctrl</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">m</span><span class="o">.</span><span class="n">slider_ctrl</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">controls</span><span class="p">:</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">remove_control</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">slider_ctrl</span><span class="p">)</span>
+        <span class="n">slider_widget</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="n">close_btn</span><span class="o">.</span><span class="n">on_click</span><span class="p">(</span><span class="n">close_click</span><span class="p">)</span>
+
+    <span class="n">slider_ctrl</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">WidgetControl</span><span class="p">(</span><span class="n">widget</span><span class="o">=</span><span class="n">slider_widget</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="n">position</span><span class="p">)</span>
+    <span class="n">m</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">slider_ctrl</span><span class="p">)</span>
+    <span class="n">m</span><span class="o">.</span><span class="n">slider_ctrl</span> <span class="o">=</span> <span class="n">slider_ctrl</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="leafmap.toolbar.tool_template" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">tool_template</span><span class="p">(</span><span class="n">m</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+
+<a href="#leafmap.toolbar.tool_template" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Generates a tool GUI template using ipywidgets.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>m</code></td>
+        <td><code>leafmap.Map</code></td>
+        <td><p>The leaflet Map object. Defaults to None.</p></td>
+        <td><code>None</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>ipywidgets</code></td>
+      <td><p>The tool GUI widget.</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>leafmap/toolbar.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">tool_template</span><span class="p">(</span><span class="n">m</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Generates a tool GUI template using ipywidgets.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        m (leafmap.Map, optional): The leaflet Map object. Defaults to None.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        ipywidgets: The tool GUI widget.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">widget_width</span> <span class="o">=</span> <span class="s2">&quot;250px&quot;</span>
+    <span class="n">padding</span> <span class="o">=</span> <span class="s2">&quot;0px 0px 0px 5px&quot;</span>  <span class="c1"># upper, right, bottom, left</span>
+    <span class="n">style</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;description_width&quot;</span><span class="p">:</span> <span class="s2">&quot;initial&quot;</span><span class="p">}</span>
+
+    <span class="n">toolbar_button</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">ToggleButton</span><span class="p">(</span>
+        <span class="n">value</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">tooltip</span><span class="o">=</span><span class="s2">&quot;Toolbar&quot;</span><span class="p">,</span>
+        <span class="n">icon</span><span class="o">=</span><span class="s2">&quot;gear&quot;</span><span class="p">,</span>
+        <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="s2">&quot;28px&quot;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="s2">&quot;28px&quot;</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s2">&quot;0px 0px 0px 4px&quot;</span><span class="p">),</span>
+    <span class="p">)</span>
+
+    <span class="n">close_button</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">ToggleButton</span><span class="p">(</span>
+        <span class="n">value</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">tooltip</span><span class="o">=</span><span class="s2">&quot;Close the tool&quot;</span><span class="p">,</span>
+        <span class="n">icon</span><span class="o">=</span><span class="s2">&quot;times&quot;</span><span class="p">,</span>
+        <span class="n">button_style</span><span class="o">=</span><span class="s2">&quot;primary&quot;</span><span class="p">,</span>
+        <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="s2">&quot;28px&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;28px&quot;</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s2">&quot;0px 0px 0px 4px&quot;</span><span class="p">),</span>
+    <span class="p">)</span>
+
+    <span class="n">checkbox</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Checkbox</span><span class="p">(</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Checkbox&quot;</span><span class="p">,</span>
+        <span class="n">indent</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">padding</span><span class="o">=</span><span class="n">padding</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">widget_width</span><span class="p">),</span>
+    <span class="p">)</span>
+
+    <span class="n">dropdown</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Dropdown</span><span class="p">(</span>
+        <span class="n">options</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Option 1&quot;</span><span class="p">,</span> <span class="s2">&quot;Option 2&quot;</span><span class="p">,</span> <span class="s2">&quot;Option 3&quot;</span><span class="p">],</span>
+        <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Dropdown:&quot;</span><span class="p">,</span>
+        <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="n">widget_width</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="n">padding</span><span class="p">),</span>
+        <span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">int_slider</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">IntSlider</span><span class="p">(</span>
+        <span class="nb">min</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="nb">max</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Int Slider: &quot;</span><span class="p">,</span>
+        <span class="n">readout</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">continuous_update</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="s2">&quot;220px&quot;</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="n">padding</span><span class="p">),</span>
+        <span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">int_slider_label</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">()</span>
+    <span class="n">widgets</span><span class="o">.</span><span class="n">jslink</span><span class="p">((</span><span class="n">int_slider</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">),</span> <span class="p">(</span><span class="n">int_slider_label</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">))</span>
+
+    <span class="n">float_slider</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatSlider</span><span class="p">(</span>
+        <span class="nb">min</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="nb">max</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Float Slider: &quot;</span><span class="p">,</span>
+        <span class="n">readout</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">continuous_update</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="s2">&quot;220px&quot;</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="n">padding</span><span class="p">),</span>
+        <span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">float_slider_label</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">()</span>
+    <span class="n">widgets</span><span class="o">.</span><span class="n">jslink</span><span class="p">((</span><span class="n">float_slider</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">),</span> <span class="p">(</span><span class="n">float_slider_label</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">))</span>
+
+    <span class="n">color</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">ColorPicker</span><span class="p">(</span>
+        <span class="n">concise</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Color:&quot;</span><span class="p">,</span>
+        <span class="n">value</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span>
+        <span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">,</span>
+        <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="n">widget_width</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="n">padding</span><span class="p">),</span>
+    <span class="p">)</span>
+
+    <span class="n">text</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span>
+        <span class="n">value</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Textbox:&quot;</span><span class="p">,</span>
+        <span class="n">placeholder</span><span class="o">=</span><span class="s2">&quot;Placeholder&quot;</span><span class="p">,</span>
+        <span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">,</span>
+        <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="n">widget_width</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="n">padding</span><span class="p">),</span>
+    <span class="p">)</span>
+
+    <span class="n">textarea</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Textarea</span><span class="p">(</span>
+        <span class="n">placeholder</span><span class="o">=</span><span class="s2">&quot;Placeholder&quot;</span><span class="p">,</span>
+        <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="n">widget_width</span><span class="p">),</span>
+    <span class="p">)</span>
+
+    <span class="n">buttons</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">ToggleButtons</span><span class="p">(</span>
+        <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">options</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Apply&quot;</span><span class="p">,</span> <span class="s2">&quot;Reset&quot;</span><span class="p">,</span> <span class="s2">&quot;Close&quot;</span><span class="p">],</span>
+        <span class="n">tooltips</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Apply&quot;</span><span class="p">,</span> <span class="s2">&quot;Reset&quot;</span><span class="p">,</span> <span class="s2">&quot;Close&quot;</span><span class="p">],</span>
+        <span class="n">button_style</span><span class="o">=</span><span class="s2">&quot;primary&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">buttons</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">button_width</span> <span class="o">=</span> <span class="s2">&quot;80px&quot;</span>
+
+    <span class="n">output</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">(</span><span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="n">widget_width</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="n">padding</span><span class="p">))</span>
+
+    <span class="n">toolbar_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">()</span>
+    <span class="n">toolbar_widget</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[</span><span class="n">toolbar_button</span><span class="p">]</span>
+    <span class="n">toolbar_header</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">()</span>
+    <span class="n">toolbar_header</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[</span><span class="n">close_button</span><span class="p">,</span> <span class="n">toolbar_button</span><span class="p">]</span>
+    <span class="n">toolbar_footer</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">()</span>
+    <span class="n">toolbar_footer</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">checkbox</span><span class="p">,</span>
+        <span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">([</span><span class="n">int_slider</span><span class="p">,</span> <span class="n">int_slider_label</span><span class="p">]),</span>
+        <span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">([</span><span class="n">float_slider</span><span class="p">,</span> <span class="n">float_slider_label</span><span class="p">]),</span>
+        <span class="n">dropdown</span><span class="p">,</span>
+        <span class="n">text</span><span class="p">,</span>
+        <span class="n">color</span><span class="p">,</span>
+        <span class="n">textarea</span><span class="p">,</span>
+        <span class="n">buttons</span><span class="p">,</span>
+        <span class="n">output</span><span class="p">,</span>
+    <span class="p">]</span>
+
+    <span class="n">toolbar_event</span> <span class="o">=</span> <span class="n">ipyevents</span><span class="o">.</span><span class="n">Event</span><span class="p">(</span>
+        <span class="n">source</span><span class="o">=</span><span class="n">toolbar_widget</span><span class="p">,</span> <span class="n">watched_events</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;mouseenter&quot;</span><span class="p">,</span> <span class="s2">&quot;mouseleave&quot;</span><span class="p">]</span>
+    <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">handle_toolbar_event</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="n">event</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;mouseenter&quot;</span><span class="p">:</span>
+            <span class="n">toolbar_widget</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[</span><span class="n">toolbar_header</span><span class="p">,</span> <span class="n">toolbar_footer</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">event</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;mouseleave&quot;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">toolbar_button</span><span class="o">.</span><span class="n">value</span><span class="p">:</span>
+                <span class="n">toolbar_widget</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[</span><span class="n">toolbar_button</span><span class="p">]</span>
+                <span class="n">toolbar_button</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="n">close_button</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="n">toolbar_event</span><span class="o">.</span><span class="n">on_dom_event</span><span class="p">(</span><span class="n">handle_toolbar_event</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">toolbar_btn_click</span><span class="p">(</span><span class="n">change</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">change</span><span class="p">[</span><span class="s2">&quot;new&quot;</span><span class="p">]:</span>
+            <span class="n">close_button</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="n">toolbar_widget</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[</span><span class="n">toolbar_header</span><span class="p">,</span> <span class="n">toolbar_footer</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">close_button</span><span class="o">.</span><span class="n">value</span><span class="p">:</span>
+                <span class="n">toolbar_widget</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[</span><span class="n">toolbar_button</span><span class="p">]</span>
+
+    <span class="n">toolbar_button</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">toolbar_btn_click</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">close_btn_click</span><span class="p">(</span><span class="n">change</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">change</span><span class="p">[</span><span class="s2">&quot;new&quot;</span><span class="p">]:</span>
+            <span class="n">toolbar_button</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="k">if</span> <span class="n">m</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">m</span><span class="o">.</span><span class="n">toolbar_reset</span><span class="p">()</span>
+                <span class="k">if</span> <span class="n">m</span><span class="o">.</span><span class="n">tool_control</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">m</span><span class="o">.</span><span class="n">tool_control</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">controls</span><span class="p">:</span>
+                    <span class="n">m</span><span class="o">.</span><span class="n">remove_control</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">tool_control</span><span class="p">)</span>
+                    <span class="n">m</span><span class="o">.</span><span class="n">tool_control</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="n">toolbar_widget</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="n">close_button</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">close_btn_click</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">button_clicked</span><span class="p">(</span><span class="n">change</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">change</span><span class="p">[</span><span class="s2">&quot;new&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Apply&quot;</span><span class="p">:</span>
+            <span class="k">with</span> <span class="n">output</span><span class="p">:</span>
+                <span class="n">output</span><span class="o">.</span><span class="n">clear_output</span><span class="p">()</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Running ...&quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">change</span><span class="p">[</span><span class="s2">&quot;new&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Reset&quot;</span><span class="p">:</span>
+            <span class="n">textarea</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+            <span class="n">output</span><span class="o">.</span><span class="n">clear_output</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">change</span><span class="p">[</span><span class="s2">&quot;new&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Close&quot;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">m</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">m</span><span class="o">.</span><span class="n">toolbar_reset</span><span class="p">()</span>
+                <span class="k">if</span> <span class="n">m</span><span class="o">.</span><span class="n">tool_control</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">m</span><span class="o">.</span><span class="n">tool_control</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">controls</span><span class="p">:</span>
+                    <span class="n">m</span><span class="o">.</span><span class="n">remove_control</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">tool_control</span><span class="p">)</span>
+                    <span class="n">m</span><span class="o">.</span><span class="n">tool_control</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="n">toolbar_widget</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+        <span class="n">buttons</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="n">buttons</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">button_clicked</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">)</span>
+
+    <span class="n">toolbar_button</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">if</span> <span class="n">m</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">toolbar_control</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">WidgetControl</span><span class="p">(</span>
+            <span class="n">widget</span><span class="o">=</span><span class="n">toolbar_widget</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;topright&quot;</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">toolbar_control</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">controls</span><span class="p">:</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">toolbar_control</span><span class="p">)</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">tool_control</span> <span class="o">=</span> <span class="n">toolbar_control</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">toolbar_widget</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: 2021-09-17
+    
+  </small>
+</div>
+                  
+                
+              
+
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../osm/" class="md-footer__link md-footer__link--prev" aria-label="Previous: osm module" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              osm module
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../notebooks/00_key_features/" class="md-footer__link md-footer__link--next" aria-label="Next: 00 key features" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              00 key features
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "search.highlight"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.756773cc.min.js"></script>
+      
+    
+  </body>
+</html>
